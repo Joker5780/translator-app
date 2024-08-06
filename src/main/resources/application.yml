@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: translator
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:data.sql
+      schema-locations: classpath:schema.sql
+    h2:
+      console:
+        path: /h2-console
+        settings:
+          web-allow-others: true
+
+
